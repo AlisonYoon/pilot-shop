@@ -1,0 +1,331 @@
+* {
+	list-style: none;
+	font-family: sans-serif;
+}
+body {
+	font-size: 62.5%;
+}
+h1, h2, h3 {
+	margin: 30px 0;
+}
+ul {
+	padding: 0;
+}
+.sub-nav, .hero h1, .hero button, .banner h2, .banner p, .banner button, .featured h3, .product-title, .new-sticker {
+	text-transform: uppercase;
+}
+.hero h1, .hero button, .banners, .banner button, .new-sticker, .discount-sticker {
+	color: #fff;
+}
+.hero button, .banner button, .sub-nav, .products-list p.product-title, .price, .contact-us, .new-sticker, .discount-sticker {
+	font-weight: 600;
+}
+.hero button, .banner button {
+	background: none;
+	border: 2px solid #fff;
+	width: 140px;
+	height: 50px;
+	font-size: 0.9rem;
+}
+/* Header Area */
+
+.sub-nav {
+	overflow: auto;
+	background: #e9ebf0;
+	font-size: 0.9rem;
+	padding-bottom: 1rem;
+}
+.phone-number {
+	display: none;
+}
+.user-menu-items {
+	padding: 0;
+	overflow: auto;
+	width: 310px;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+.user-menu-items li {
+	margin: 0 5px;
+}
+.cart {
+	overflow: auto;
+}
+.cart li {
+	margin: 0 10px;
+}
+.search {
+	float: right;
+}
+.user-menu, .phone-number {
+	color: #bbb;
+}
+.user-menu-items {
+	clear: both;
+}
+.cart li, .user-menu-items li {
+	float: left;
+}
+
+.main-nav {
+	padding: 2rem 0;
+}
+.logo img {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+}
+.main-menu {
+	display: none;
+}
+.main-menu-dropdown {
+	width: 98%;
+	margin: 0 1%;
+	font-size: 1.4rem;
+}
+
+/* Hero Area */
+.hero {
+	background: url(images/hero.jpg);
+	background-size: cover;
+	text-align: center;
+	height: 50vw;
+	position: relative;
+}
+.hero div {
+	height: 170px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.hero h1 {
+	font-size: 2rem;
+} 
+.hero h1 p {
+	font-size: 0.8rem;
+}
+
+/* Banners Area */
+.banners {
+	margin: 2rem 0;
+}
+.banners div:nth-child(2), .banners div:nth-child(3) {
+	display: none;
+}
+.banners div:first-child {
+	background: #474747;
+	width: 322px;
+	height: 200px;
+	margin: 0 auto;
+}
+.banner {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.banner h2{
+	font-size: 1.3rem;
+}
+.banner p{
+	font-size: 0.8rem;
+}
+.banner button {
+	margin-top: 1.5rem;
+}
+
+/* Featured Area */
+.featured h3 {
+	text-align: center;
+	color: #1e2847;
+	font-size: 1.1rem;
+	margin-top: 76px;
+}
+.products-list p {
+	font-size: 0.85rem;
+}
+.products-list p.product-title {
+	font-size: 0.9rem;
+}
+.products-list .products-list-item {
+	overflow: auto;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.product-img {
+	float: left;
+	position: relative;
+}
+.product-img img {
+	width: 120px;
+}
+.new-sticker, .discount-sticker {
+	display: flex;
+	width: 48px;
+	height: 48px;
+	background: #589ec2;
+	border-radius: 24px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.6rem;
+}
+.discount-sticker {
+	display: none;
+	background: #d91604;
+	left: 0;
+}
+.price {
+	font-size: 1.2rem;
+	color: #3baedb;
+}
+.old-price {
+	text-decoration: line-through;
+}
+.product-info {
+	text-align: center;
+	width: 340px;
+	margin: 0 auto;
+}
+
+/* Contact us */
+.contact-us {
+	font-size: 1rem;
+	width: 140px;
+	height: 48px;
+	background: #3baedb;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	bottom: 0;
+	left: 65%;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+}
+
+
+
+
+@media screen and (min-width: 641px) {
+	.banners {
+		display: flex;
+	}
+	.banner {
+		display: block;
+	}
+	.banners div:nth-child(2) {
+		display: block;
+		background: #3194c4;
+	}
+	.banners div:first-child, .banners div:nth-child(2) {
+		width: 41%;
+		height: 25vw;
+		margin: 0 2%;
+	}
+	.product-img img {
+		width: 160px;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.banner {
+		display: block;
+	}
+	.banners div:nth-child(3) {
+		display: block;
+		background: #4ebcf2;
+		width: 41%;
+		margin: 0 2%;
+	}
+	.banners div:first-child, .banners div:nth-child(2), .banners div:nth-child(3) {
+		height: 12vw;
+	}
+	.banner button {
+		display: none;
+	}
+	.banner h2 {
+		margin: 0;
+		font-weight: 400;
+	}
+	.products-list .products-list-item {
+		width: 32%;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.product-img {
+		float: none;
+	}
+	.product-img img {
+		width: 100%;
+	}
+	.product-info {
+		width: 100%;
+	}
+	.discount-sticker {
+		display: flex;
+		font-size: 0.9rem;
+	}
+	/*****************      REVISE IT LATER        ****************/
+	.products-list .products-list-item:first-child p.product-title {
+		width: 80%;
+	}
+	/*****************      REVISE IT LATER        ****************/
+}
+
+@media screen and (min-width: 992px) {
+	.phone-number {
+		display: block;
+	}
+	.sub-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1%;
+	}
+	.user-menu {
+		display: flex;
+		align-items: center;
+	}
+	.search {
+		float: none;
+		order: 3;
+	}
+	.cart {
+		order: 2;
+	}
+	.user-menu-items {
+		margin: 0;
+	}
+	.main-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+	.main-menu-dropdown {
+		width: 15%;
+		margin: 0 1%;
+	}
+	.products-list {
+		display: flex;
+	}
+	.products-list .products-list-item {
+		width: 23%;
+	}
+}
+
+
+
+
+
+
