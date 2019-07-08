@@ -11,13 +11,17 @@ h1, h2, h3 {
 ul {
 	padding: 0;
 }
-.sub-nav, .hero h1, .hero button, .banner h2, .banner p, .banner button, .featured h3, .product-title, .new-sticker {
+a {
+	text-decoration: none;
+	color: #000;
+}
+.sub-nav, .hero h1, .hero button, .banner h2, .banner p, .banner button, .featured h3, .product-title, .new-sticker, .main-menu li a, .main-menu li a span {
 	text-transform: uppercase;
 }
-.hero h1, .hero button, .banners, .banner button, .new-sticker, .discount-sticker {
+.hero h1, .hero button, .banners, .banner button, .new-sticker, .discount-sticker, .main-menu li a span {
 	color: #fff;
 }
-.hero button, .banner button, .sub-nav, .products-list p.product-title, .price, .contact-us, .new-sticker, .discount-sticker {
+.hero button, .banner button, .sub-nav, .products-list p.product-title, .price, .contact-us, .new-sticker, .discount-sticker, .main-menu li a {
 	font-weight: 600;
 }
 .hero button, .banner button {
@@ -31,7 +35,7 @@ ul {
 
 .sub-nav {
 	overflow: auto;
-	background: #e9ebf0;
+	background: #f8f8f8;
 	font-size: 0.9rem;
 	padding-bottom: 1rem;
 }
@@ -54,11 +58,25 @@ ul {
 .cart li {
 	margin: 0 10px;
 }
+.cart li:first-child::after, .cart li:first-child::before {
+	display: inline-block;
+	content: "";
+	width: 1px;
+	background: #e9ebed;
+	position: absolute;
+	top: 0;
+	height: 46px;
+	vertical-align: inherit;
+}
+.cart li:first-child::before {
+	margin-right: 100px;
+}
+
 .search {
 	float: right;
 }
 .user-menu, .phone-number {
-	color: #bbb;
+	color: #b7b7b8;
 }
 .user-menu-items {
 	clear: both;
@@ -116,7 +134,8 @@ ul {
 	display: none;
 }
 .banners div:first-child {
-	background: #474747;
+	background: url('images/banner1.jpg');
+	background-size: contain;
 	width: 322px;
 	height: 200px;
 	margin: 0 auto;
@@ -208,7 +227,7 @@ ul {
 	align-items: center;
 	position: sticky;
 	bottom: 0;
-	left: 65%;
+	left: calc(100% - 160px);
 	border-radius: 10px 10px 0 0;
 	color: #fff;
 }
@@ -225,7 +244,8 @@ ul {
 	}
 	.banners div:nth-child(2) {
 		display: block;
-		background: #3194c4;
+		background: url('images/banner2.jpg');
+		background-size: contain;
 	}
 	.banners div:first-child, .banners div:nth-child(2) {
 		width: 41%;
@@ -239,17 +259,37 @@ ul {
 
 
 @media screen and (min-width: 768px) {
+	.hero {
+		height: 40vw;
+		padding-top: 1rem;
+	}
+	.hero div {
+		position: static;
+	}
+	.hero h1 {
+		font-size: 3rem;
+	}
+	.hero h1 p {
+		font-size: 0.9rem;
+		margin: 0;
+	}
+	.banners {
+		position: relative;
+		width: 85%;
+		margin: -5rem auto 5rem;
+	}
 	.banner {
 		display: block;
 	}
 	.banners div:nth-child(3) {
 		display: block;
-		background: #4ebcf2;
-		width: 41%;
+		background: url('images/banner3.jpg');
+		background-size: contain;
 		margin: 0 2%;
 	}
 	.banners div:first-child, .banners div:nth-child(2), .banners div:nth-child(3) {
 		height: 12vw;
+		width: 28%;
 	}
 	.banner button {
 		display: none;
@@ -284,6 +324,10 @@ ul {
 }
 
 @media screen and (min-width: 992px) {
+	.hero h1 {
+		font-size: 4rem;
+		letter-spacing: 0.4rem;
+	}
 	.phone-number {
 		display: block;
 	}
@@ -316,6 +360,9 @@ ul {
 		width: 15%;
 		margin: 0 1%;
 	}
+	.banners {
+		width: 970px;
+	}
 	.products-list {
 		display: flex;
 	}
@@ -325,7 +372,82 @@ ul {
 }
 
 
+@media screen and (min-width: 1007px) {
+	.main-nav {
+		justify-content: center;
+	}
+	.main-menu-dropdown {
+		display: none;
+	}
+	.main-menu {
+		display: block;
+		font-size: 1rem;
+		display: flex;
+		width: 60%;
+		justify-content: space-around;
+	}
+	.main-menu li:nth-child(2) a {
+		position: relative;
+	}
+	/*****************      REVISE IT LATER        ****************/
+	.main-menu li a {
+		padding: 0.9rem;
+		transition: all 0.2s ease;
+		box-sizing: border-box;
+		border: 2px solid #fff;
+	}
+	.main-menu li a:hover {
+		border-color: #000;
+	}
+	/*****************      REVISE IT LATER        ****************/
+	.main-menu li a span {
+		font-size: 0.6rem;
+		font-weight: 400;
+		padding: 0.2rem;
+		background: #d91604;
+		position: absolute;
+		width: 60px;
+		top: -0.6rem;
+		right: -1rem;
+		text-align: center;
+	}
+	.main-menu li a.active {
+		border: 2px solid #000;
+	}
+}
 
+
+@media screen and (min-width: 1200px) {
+	.main-nav {
+		justify-content: space-between;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.main-menu {
+		width: 60%;
+	}
+	.hero div {
+		position: absolute;
+		top: 32%;
+		transform: translateY(-80%);
+	}
+	.banners {
+		width: 1170px;
+		margin: -10rem auto 5rem;
+	}
+	.banners div:first-child, .banners div:nth-child(2), .banners div:nth-child(3) {
+		width: 30%;
+		margin: 0 1%;
+		height: 14vw;
+		background-size: cover;
+	}
+	.banner h2 {
+		font-size: 2.7rem;
+	}
+	.banner p {
+		font-size: 1.4rem;
+	}
+}
 
 
 
