@@ -63,16 +63,14 @@ var products = [
         }
     ]
 
-// var productList = JSON.parse(products)
+// var productList = JSON.parse(products)   This is only if JSON is string.
 var template = document.getElementById('list-item').innerHTML
 
 var compiledTemplate = Handlebars.compile(template)
 
 products.forEach(function(product) {
-    // template += compiledTemplate(product)
     var rendered = compiledTemplate(product)
     console.log(rendered)
     document.querySelector('.products-list').innerHTML += rendered
 
 })
-
